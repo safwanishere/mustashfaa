@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
 import 'package:mustashfaa/homeScreen.dart';
@@ -30,22 +31,28 @@ class NavigationMenu extends StatelessWidget {
           elevation: 0,
           selectedIndex: controller.selectedIndex.value,
           onDestinationSelected: (index) => controller.selectedIndex.value = index,
+          backgroundColor: const Color.fromRGBO(34, 111, 84, 1),
+          indicatorColor: const Color.fromRGBO(255, 255, 255, 0.1),
         
           destinations: const <Widget>[
             NavigationDestination(
-              icon: Icon(FontAwesomeIcons.home),
+              icon: Icon(FontAwesomeIcons.home, color: Color.fromRGBO(135, 195, 143, 1),),
+              selectedIcon: Icon(FontAwesomeIcons.home, color: Colors.white,),
               label: 'Home',
             ),
             NavigationDestination(
-              icon: Icon(FontAwesomeIcons.flask),
+              icon: Icon(FontAwesomeIcons.flask, color: Color.fromRGBO(135, 195, 143, 1),),
+              selectedIcon: Icon(FontAwesomeIcons.flask, color: Colors.white,),
               label: 'Tests',
             ),
             NavigationDestination(
-              icon: Icon(FontAwesomeIcons.store),
+              icon: Icon(FontAwesomeIcons.store, color: Color.fromRGBO(135, 195, 143, 1),),
+              selectedIcon: Icon(FontAwesomeIcons.store, color: Colors.white,),
               label: 'Products',
             ),
              NavigationDestination(
-              icon: Icon(FontAwesomeIcons.user),
+              icon: Icon(FontAwesomeIcons.user, color: Color.fromRGBO(135, 195, 143, 1),),
+              selectedIcon: Icon(FontAwesomeIcons.user, color: Colors.white,),
               label: 'Account',
             ),
           ],
