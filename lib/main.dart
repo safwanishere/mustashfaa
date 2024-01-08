@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:mustashfaa/homeScreen.dart';
+import 'package:mustashfaa/navigation_menu.dart';
+import 'package:mustashfaa/startup.dart';
+import 'package:get/get.dart';
 
 void main() {
   runApp(const MyApp());
@@ -10,12 +13,14 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
       title: 'Flutter Demo',
       routes: {
+        "/startup":(context) => const Startup(),
+        "/navMenu":(context) => const NavigationMenu(),
         "/home":(context) => const homeScreen(),
       },
-      initialRoute: "/home",
+      initialRoute: "/startup",
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
