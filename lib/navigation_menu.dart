@@ -14,11 +14,11 @@ class NavigationMenu extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         automaticallyImplyLeading: false,
-        title: const Row(
+        title: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Icon(FontAwesomeIcons.stethoscope),
-            Text("مستشفى"),
+            Image.asset("assets/logo.png", height: 30),
+            const Text("مستشفى"),
           ],
         ),
         backgroundColor: const Color.fromRGBO(34, 111, 84, 1),

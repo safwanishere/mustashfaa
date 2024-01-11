@@ -1,9 +1,9 @@
 flutter_native_splash:
   color: "#226F54"
-  image: assets\icons8-hospital-64.png
+  image: assets\logo.png
 
   android_12:
     color: "#226F54"
-    image: assets\icons8-hospital-64.png
+    image: assets\logo.png
   
   web: false

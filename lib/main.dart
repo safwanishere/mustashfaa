@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
         "/navMenu":(context) => const NavigationMenu(),
         "/home":(context) => const homeScreen(),
       },
-      initialRoute: "/startup",
+      initialRoute: "/navMenu",
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,

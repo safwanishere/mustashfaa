@@ -19,6 +19,15 @@ class _homeScreenState extends State<homeScreen> {
         color: const Color.fromRGBO(255, 234, 238, 1),
         width: MediaQuery.of(context).size.width,
         height: MediaQuery.of(context).size.height,
+        child: Padding(
+          padding: EdgeInsets.only(left: 20, right: 20),
+          child: Column(
+            children: [
+              SizedBox(height: 20,),
+              Image.asset("assets/homePageTop.png")
+            ],
+          ),
+        ),
       ),
     );
   }
