@@ -17,6 +17,8 @@ class _homeScreenState extends State<homeScreen> {
     return Scaffold(
       body: Container(
         color: const Color.fromRGBO(255, 234, 238, 1),
+        width: MediaQuery.of(context).size.width,
+        height: MediaQuery.of(context).size.height,
       ),
     );
   }

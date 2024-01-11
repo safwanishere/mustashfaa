@@ -26,36 +26,53 @@ class NavigationMenu extends StatelessWidget {
       ),
 
       bottomNavigationBar: Obx(
-        () =>  NavigationBar(
-          height: 80,
-          elevation: 0,
-          selectedIndex: controller.selectedIndex.value,
-          onDestinationSelected: (index) => controller.selectedIndex.value = index,
-          backgroundColor: const Color.fromRGBO(34, 111, 84, 1),
-          indicatorColor: const Color.fromRGBO(255, 255, 255, 0.1),
-        
-          destinations: const <Widget>[
-            NavigationDestination(
-              icon: Icon(FontAwesomeIcons.home, color: Color.fromRGBO(135, 195, 143, 1),),
-              selectedIcon: Icon(FontAwesomeIcons.home, color: Colors.white,),
-              label: 'Home',
-            ),
-            NavigationDestination(
-              icon: Icon(FontAwesomeIcons.flask, color: Color.fromRGBO(135, 195, 143, 1),),
-              selectedIcon: Icon(FontAwesomeIcons.flask, color: Colors.white,),
-              label: 'Tests',
-            ),
-            NavigationDestination(
-              icon: Icon(FontAwesomeIcons.store, color: Color.fromRGBO(135, 195, 143, 1),),
-              selectedIcon: Icon(FontAwesomeIcons.store, color: Colors.white,),
-              label: 'Products',
-            ),
-             NavigationDestination(
-              icon: Icon(FontAwesomeIcons.user, color: Color.fromRGBO(135, 195, 143, 1),),
-              selectedIcon: Icon(FontAwesomeIcons.user, color: Colors.white,),
-              label: 'Account',
-            ),
-          ],
+        () =>  NavigationBarTheme(
+          data: NavigationBarThemeData(
+            labelTextStyle: MaterialStateTextStyle.resolveWith((states) {
+            if (states.contains(MaterialState.selected)) {
+              return const TextStyle(
+                color: Colors.white
+              );
+            }
+            return const TextStyle(
+              color: Color.fromRGBO(135, 195, 143, 1)
+            );
+          }),
+          ),
+
+          child: NavigationBar(
+            height: 80,
+            elevation: 0,
+            selectedIndex: controller.selectedIndex.value,
+            onDestinationSelected: (index) => controller.selectedIndex.value = index,
+            backgroundColor: const Color.fromRGBO(34, 111, 84, 1),
+            indicatorColor: const Color.fromRGBO(255, 255, 255, 0),
+          
+            labelBehavior: NavigationDestinationLabelBehavior.alwaysShow,
+          
+            destinations: const <Widget>[
+              NavigationDestination(
+                icon: Icon(FontAwesomeIcons.home, color: Color.fromRGBO(135, 195, 143, 1),),
+                selectedIcon: Icon(FontAwesomeIcons.home, color: Colors.white,),
+                label: 'Home',
+              ),
+              NavigationDestination(
+                icon: Icon(FontAwesomeIcons.flask, color: Color.fromRGBO(135, 195, 143, 1),),
+                selectedIcon: Icon(FontAwesomeIcons.flask, color: Colors.white,),
+                label: 'Tests',
+              ),
+              NavigationDestination(
+                icon: Icon(FontAwesomeIcons.store, color: Color.fromRGBO(135, 195, 143, 1),),
+                selectedIcon: Icon(FontAwesomeIcons.store, color: Colors.white,),
+                label: 'Products',
+              ),
+               NavigationDestination(
+                icon: Icon(FontAwesomeIcons.user, color: Color.fromRGBO(135, 195, 143, 1),),
+                selectedIcon: Icon(FontAwesomeIcons.user, color: Colors.white,),
+                label: 'Account',
+              ),
+            ],
+          ),
         ),
       ),
 
