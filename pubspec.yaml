@@ -67,10 +67,13 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
+    - assets/
     - assets/stethoscope-solid.svg
     - assets/icons8-hospital-64.png
     - assets/logo.png
     - assets/homePageTop.png
+    - assets/apollo.jpg
+    - assets/starsBG.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
