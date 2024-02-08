@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:mustashfaa/homeScreen.dart';
 import 'package:mustashfaa/navigation_menu.dart';
 import 'package:mustashfaa/startup.dart';
-import 'package:get/get.dart';
+import 'package:mustashfaa/testsScreen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -19,6 +20,7 @@ class MyApp extends StatelessWidget {
         "/startup":(context) => const Startup(),
         "/navMenu":(context) => const NavigationMenu(),
         "/home":(context) => const homeScreen(),
+        "/tests":(context) => const testsScreen()
       },
       initialRoute: "/navMenu",
       theme: ThemeData(

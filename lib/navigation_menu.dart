@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
 import 'package:mustashfaa/homeScreen.dart';
+import 'package:mustashfaa/testsScreen.dart';
 
 class NavigationMenu extends StatelessWidget {
   const NavigationMenu({super.key});
@@ -84,5 +85,5 @@ class NavigationMenu extends StatelessWidget {
 class NavigationController extends GetxController{
   final Rx<int> selectedIndex = 0.obs;
 
-  final screens = [const homeScreen(), Container(color: Colors.red,), Container(color: Colors.green), Container(color: Colors.yellow)];
+  final screens = [const homeScreen(), const testsScreen(), Container(color: Colors.green), Container(color: Colors.yellow)];
 }
