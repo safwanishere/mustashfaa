@@ -43,7 +43,7 @@ class _testsScreenState extends State<testsScreen> {
                       height: 30,
                       width: 100,
                       decoration: const BoxDecoration(borderRadius: BorderRadius.all(Radius.circular(15.0)), color: Color.fromRGBO(218, 44, 56, 1)),
-                      child: Center(child: Text("Book Now!", style: TextStyle(color: Colors.white),))
+                      child: const Center(child: Text("Book Now!", style: TextStyle(color: Colors.white),))
                     )
                   ],
                 ),
