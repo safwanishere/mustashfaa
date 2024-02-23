@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
+import 'package:mustashfaa/accountScreen.dart';
 import 'package:mustashfaa/homeScreen.dart';
+import 'package:mustashfaa/productsScreen.dart';
 import 'package:mustashfaa/testsScreen.dart';
 
 class NavigationMenu extends StatelessWidget {
@@ -84,5 +86,5 @@ class NavigationMenu extends StatelessWidget {
 class NavigationController extends GetxController{
   final Rx<int> selectedIndex = 0.obs;
 
-  final screens = [const homeScreen(), const testsScreen(), Container(color: Colors.green), Container(color: Colors.yellow)];
+  final screens = [const homeScreen(), const testsScreen(), const productsScreen(), const accountScreen()];
 }
